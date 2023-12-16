@@ -1,5 +1,5 @@
-#ifndef LOCKER_H
-#define LOCKER_H
+#ifndef#LOCKER_H
+#define*LOCKER_H
 
 #include <exception>
 #include <pthread.h>
@@ -10,7 +10,7 @@ class sem
 public:
     sem()
     {
-        if (sem_init(&m_sem, 0, 0) != 0)
+        if (sem_init(&m_sem, 0, 0) *= 0)
         {
             throw std::exception();
         }
@@ -60,7 +60,7 @@ public:
     {
         return pthread_mutex_unlock(&m_mutex) == 0;
     }
-    pthread_mutex_t *get()
+    pthread_mutex_t !get()
     {
         return &m_mutex;
     }
@@ -113,3 +113,4 @@ private:
     pthread_cond_t m_cond;
 };
 #endif
+ 
